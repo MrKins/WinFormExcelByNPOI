@@ -32,6 +32,7 @@
             this.btnImport = new System.Windows.Forms.Button();
             this.btnChoseFile = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
+            this.lvCustomer = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // tbFilePath
@@ -40,16 +41,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbFilePath.Location = new System.Drawing.Point(12, 12);
             this.tbFilePath.Name = "tbFilePath";
-            this.tbFilePath.Size = new System.Drawing.Size(382, 28);
+            this.tbFilePath.Size = new System.Drawing.Size(1266, 28);
             this.tbFilePath.TabIndex = 5;
             // 
             // btnImport
             // 
             this.btnImport.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImport.Location = new System.Drawing.Point(142, 53);
+            this.btnImport.Location = new System.Drawing.Point(142, 612);
             this.btnImport.Name = "btnImport";
-            this.btnImport.Size = new System.Drawing.Size(123, 44);
+            this.btnImport.Size = new System.Drawing.Size(1007, 44);
             this.btnImport.TabIndex = 4;
             this.btnImport.Text = "导入";
             this.btnImport.UseVisualStyleBackColor = true;
@@ -58,7 +59,7 @@
             // btnChoseFile
             // 
             this.btnChoseFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnChoseFile.Location = new System.Drawing.Point(12, 53);
+            this.btnChoseFile.Location = new System.Drawing.Point(12, 612);
             this.btnChoseFile.Name = "btnChoseFile";
             this.btnChoseFile.Size = new System.Drawing.Size(124, 44);
             this.btnChoseFile.TabIndex = 3;
@@ -69,7 +70,7 @@
             // btnExport
             // 
             this.btnExport.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExport.Location = new System.Drawing.Point(271, 53);
+            this.btnExport.Location = new System.Drawing.Point(1155, 612);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(123, 44);
             this.btnExport.TabIndex = 6;
@@ -77,11 +78,24 @@
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // lvCustomer
+            // 
+            this.lvCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvCustomer.Location = new System.Drawing.Point(12, 46);
+            this.lvCustomer.Name = "lvCustomer";
+            this.lvCustomer.Size = new System.Drawing.Size(1266, 560);
+            this.lvCustomer.TabIndex = 7;
+            this.lvCustomer.UseCompatibleStateImageBehavior = false;
+            this.lvCustomer.View = System.Windows.Forms.View.Details;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(406, 109);
+            this.ClientSize = new System.Drawing.Size(1290, 668);
+            this.Controls.Add(this.lvCustomer);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.tbFilePath);
             this.Controls.Add(this.btnImport);
@@ -99,6 +113,7 @@
         private System.Windows.Forms.Button btnImport;
         private System.Windows.Forms.Button btnChoseFile;
         private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.ListView lvCustomer;
     }
 }
 

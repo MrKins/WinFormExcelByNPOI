@@ -24,6 +24,36 @@ namespace WinFormExcelByNPOI
         public Form1()
         {
             InitializeComponent();
+
+            ShowListView();
+        }
+
+        private void ShowListView()
+        {
+            List<Customer> listCustomer = GetCustomer("");
+
+            lvCustomer.Clear();
+
+            lvCustomer.FullRowSelect = true;//是否选中整行
+
+            lvCustomer.View = View.Details;//设置显示方式
+            lvCustomer.Scrollable = true;//是否自动显示滚动条
+
+            lvCustomer.Columns.Add("客户号", 50, System.Windows.Forms.HorizontalAlignment.Center);
+            lvCustomer.Columns.Add("客户名", 150, System.Windows.Forms.HorizontalAlignment.Center);
+            lvCustomer.Columns.Add("客户地址", 700, System.Windows.Forms.HorizontalAlignment.Center);
+
+            foreach (Customer customer in listCustomer)
+            {
+                ListViewItem item = new ListViewItem();
+                item.SubItems.Clear();
+
+                item.SubItems[0].Text = customer.customerID;
+                item.SubItems.Add(customer.customerName);
+                item.SubItems.Add(customer.customerAddress);
+
+                lvCustomer.Items.Add(item);
+            }
         }
 
         private void ImportExcel(FileInfo file)
@@ -51,6 +81,8 @@ namespace WinFormExcelByNPOI
 
                     SetCustomer(shopID, level);//调用本地接口函数
                 }
+
+                ShowListView();//导入完成后刷新列表
             }
         }
 
